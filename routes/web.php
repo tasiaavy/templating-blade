@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
+Route::get('/', function(){
+    return view('index');
+});
 
-Route::get('/register', 'AuthController@form');
-
-Route::post('/welcome', 'AuthController@welcome');
-
-Route::get('/halo/{nama}', function($nama) {
-    return "annyeong $nama!"; 
+Route::get('/data-tables', function(){
+    return view('data');
 });
